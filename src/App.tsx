@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import router from '@/router';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -18,23 +20,11 @@ function App() {
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
-        <p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'>
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className='App-link'
-            href='https://vitejs.dev/guide/features.html'
-            target='_blank'
-            rel='noopener noreferrer'>
-            Vite Docs
-          </a>
-        </p>
+        <Routes>
+          {router.map((i) => (
+            <Route key={i.path} path={i.path} element={i.element} />
+          ))}
+        </Routes>
       </header>
     </div>
   );

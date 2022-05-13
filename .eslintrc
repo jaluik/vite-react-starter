@@ -4,14 +4,17 @@
   "rules": {
     "react/jsx-filename-extension": [2, { "extensions": [".jsx", ".tsx"] }],
     "@typescript-eslint/no-unused-vars": 2,
+    // disabled eslint
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "import/no-anonymous-default-export": 0,
+    "react/function-component-definition": 0
   },
   "settings": {
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+      "typescript": {}
     }
   }
 }
