@@ -5,7 +5,16 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,css,scss,json}": [
+      "prettier"
+    ],
+    "*.{ts,tsx,js}": [
+      "eslint"
+    ]
   },
   "dependencies": {
     "react": "^18.1.0",
@@ -25,8 +34,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "typescript": "^4.6.4",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "husky": "^8.0.0"
   }
 }
